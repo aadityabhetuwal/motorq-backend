@@ -21,4 +21,4 @@ insert into person(name, designation)
 values('Akil Raj', 'Business Person');
 
 insert into bookings(event_id, person_id)
-values(1, 1);
+values(2, 1);

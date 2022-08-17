@@ -1,8 +1,6 @@
-drop database event_db;
 create database event_db;
 use event_db;
 
-drop table events;
 create table events(
 	event_id int auto_increment,
 	event_name varchar(50),
@@ -12,7 +10,6 @@ create table events(
     constraint pk_events primary key(event_id)
 );
 
-drop table person;
 create table person(
 	id int auto_increment,
     name varchar(50),
@@ -20,7 +17,16 @@ create table person(
     constraint pk_person primary key(id)
 );
 
-drop table bookings;
+create table wait_list(
+	person_id int,
+    event_id int,
+	designation varchar(50),
+    time timestamp,
+	constraint pk_wl primary key(event_id, person_id),
+    constraint fk_events_wl foreign key(event_id) references events(event_id),
+	constraint fk_people_wl foreign key(person_id) references person(id)
+);
+
 create table bookings(
 	event_id int,
     person_id int,
