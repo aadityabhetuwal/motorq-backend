@@ -5,4 +5,6 @@ steps to run:
 install mysql then
 `run tableCreation.sql insertion.sql`  
 
-Please set `hostname, user, password and database` in `services/connectDb.js`
+1. set `hostname, user, password and database` in `services/connectDb.js`
+
+1. use postman or thunder to send api requests
