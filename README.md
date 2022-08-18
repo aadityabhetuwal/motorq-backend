@@ -1,6 +1,8 @@
 steps to run:
 
-npm install
+`npm install`
 
-run tableCreation.sql 
-and insertion.sql
+install mysql then
+`run tableCreation.sql insertion.sql`  
+
+Please set `hostname, user, password and database` in `services/connectDb.js`
